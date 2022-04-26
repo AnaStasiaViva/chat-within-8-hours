@@ -1,9 +1,55 @@
 .Message {
-  width: 50%;
-  background: rgba(229, 231, 231, 0.493);
-  padding: 10px;
-  border-radius: 3px;
-  margin-bottom: 15px;
+  overflow-y: auto;
+  height: 75vh;
 
-  //height: 10px;
+  max-width: 100%;
+  // .message {
+  //   width: 50%;
+  //   background: rgba(229, 231, 231, 0.493);
+  //   padding: 10px;
+  //   border-radius: 3px;
+  //   margin-bottom: 15px;
+
+  //   position: relative;
+  //   //height: 10px;
+  // }
+
+  .left {
+    justify-content: flex-start;
+  }
+
+  .right {
+    justify-content: flex-end;
+  }
+
+  .sender {
+    margin-left: 70px;
+  }
+
+  .own {
+    margin-right: 50px;
+  }
+
+  .message {
+    max-width: 100%;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    display: flex;
+
+    span {
+      font-size: 12px;
+    }
+
+    div {
+      width: 45%;
+      background: rgba(229, 231, 231, 0.493);
+      padding: 10px 10px 10px 30px;
+      display: flex;
+
+      span {
+        display: flex;
+        align-self: flex-end;
+      }
+    }
+  }
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles.scss";
-import fileService from "../../api/fileService";
 
 export const AttachmentIcon = ({}) => {
   return (

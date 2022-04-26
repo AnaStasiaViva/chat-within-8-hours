@@ -1,8 +1,13 @@
 .Input {
   margin: 0 20px;
-  .input-wrapper {
-    width: 100%;
 
+  width: 800px;
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+
+  .input-wrapper {
+    width: inherit;
     input {
       width: inherit;
       padding: 10px 0;
@@ -14,16 +19,15 @@
     flex-direction: row;
     justify-content: space-between;
 
+    &:first-child {
+      background: rgba(151, 219, 249, 0.288);
+    }
+
     div {
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 5px;
-      background: rgba(151, 219, 249, 0.288);
-    }
-
-    div:nth-child(2) {
-      background: none;
     }
   }
 }

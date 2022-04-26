@@ -1,16 +1,28 @@
 import React from "react";
+import Avatar from "../Avatar";
+import Time from "../Time";
 import "./styles.scss";
 
-const Message = () => {
+//temp data
+import { message } from "../../temp-data/data";
+
+const Message = ({ my = false, main = false }) => {
+  //my true false
+  //main avatar true false
   return (
     <div className="Message">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi
-      temporibus vero doloribus natus pariatur reprehenderit tenetur recusandae
-      sit delectus dolores, dolorem doloremque, a exercitationem? Cupiditate
-      repellendus dolorem doloremque perferendis? Autem iure quisquam quae.
-      Assumenda corrupti sit ipsa excepturi numquam commodi maxime aliquid unde.
-      Quod, vel placeat eos ullam minus ipsum nihil cum soluta? Sit officia
-      impedit ut et optio.
+      <div className="avatar">
+        <Avatar />
+      </div>
+
+      {message?.map((msg) => (
+        <div className={msg.my ? "message own right" : "message sender left"}>
+          <div>
+            <p>{msg.messageContent}</p>
+            <Time />
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

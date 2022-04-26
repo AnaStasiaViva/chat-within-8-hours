@@ -2,19 +2,25 @@ import React from "react";
 import owl from "../../assets/owl.jpeg";
 import "./styles.scss";
 
-const ChatItem = () => {
+const ChatItem = ({ data, selectedChat }) => {
   return (
-    <div className="ChatItemContainer">
+    <div
+      className={
+        selectedChat === data.id
+          ? "ChatItemContainer selected"
+          : "ChatItemContainer default"
+      }
+    >
       <div className="img-wrapper">
         <img src={owl} alt="" />
       </div>
       <div className="content">
         <div>
-          <span>Great project</span>
-          <span>12:07</span>
+          <span>{data.name}</span>
+          <span>{data.time}</span>
         </div>
         <div>
-          <p>Good news, the mobile app will be rea...</p>
+          <p className="content-text">{data.content}</p>
         </div>
       </div>
     </div>

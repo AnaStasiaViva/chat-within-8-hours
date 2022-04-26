@@ -12,7 +12,6 @@ const Input = () => {
         <div>
           <AttachmentIcon />
         </div>
-
         <div>
           <SendIcon />
         </div>

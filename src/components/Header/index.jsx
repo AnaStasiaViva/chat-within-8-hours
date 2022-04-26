@@ -4,7 +4,6 @@ import "./styles.scss";
 import { ChatIcon } from "../Icons";
 
 const Header = ({ title = "", icon }) => {
-  console.log(icon, "icon status");
   return (
     <div className="HeaderContainer">
       {icon === true && <ChatIcon />}

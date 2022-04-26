@@ -1,16 +1,14 @@
 .ChatItemContainer {
-  background: rgba(191, 224, 235, 0.377);
   padding: 12px 0 12px 12px;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 
   .img-wrapper {
     height: 45px;
-    //border-radius: 20px;
     padding-right: 10px;
 
     img {
-      //width: inherit;
       height: inherit;
       overflow: hidden;
       border-radius: 7px;
@@ -26,5 +24,21 @@
       span {
       }
     }
+
+    &-text {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 250px;
+      height: 1.2em;
+      white-space: nowrap;
+    }
   }
+}
+
+.selected {
+  background: rgba(191, 224, 235, 0.377);
+}
+
+.default {
+  background: rgba(244, 246, 247, 0.377);
 }
