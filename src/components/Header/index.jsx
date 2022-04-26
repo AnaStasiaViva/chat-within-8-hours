@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles.scss";
-
 import { ChatIcon } from "../Icons";
 
 const Header = ({ title = "", icon }) => {

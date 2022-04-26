@@ -9,7 +9,7 @@ export const messages = [
     message: [
       {
         id: 1,
-        messageContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi
+        messageContent: ` sit amet consectetur adipisicing elit. Sunt quasi
         temporibus vero doloribus natus pariatur reprehenderit tenetur
         recusandae sit delectus dolores, dolorem doloremque, a exercitationem?
         Cupiditate repellendus dolorem doloremque perferendis? Autem iure
@@ -52,11 +52,7 @@ export const messages = [
     message: [
       {
         id: 1,
-        messageContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi
-        temporibus vero doloribus natus pariatur reprehenderit tenetur
-        recusandae sit delectus dolores, dolorem doloremque, a exercitationem?
-        Cupiditate repellendus dolorem doloremque perferendis? Autem iure
-        quisquam quae. Assumenda corrupti sit ipsa excepturi numquam commodi
+        messageContent: `Lorem ipsa excepturi numquam commodi
         maxime aliquid unde. Quod, vel placeat eos ullam minus ipsum nihil cum
         soluta? Sit officia impedit ut et optio.`,
         my: false,
@@ -95,9 +91,7 @@ export const messages = [
     message: [
       {
         id: 1,
-        messageContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi
-        temporibus vero doloribus natus pariatur reprehenderit tenetur
-        recusandae sit delectus dolores, dolorem doloremque, a exercitationem?
+        messageContent: `dolores, dolorem doloremque, a exercitationem?
         Cupiditate repellendus dolorem doloremque perferendis? Autem iure
         quisquam quae. Assumenda corrupti sit ipsa excepturi numquam commodi
         maxime aliquid unde. Quod, vel placeat eos ullam minus ipsum nihil cum
@@ -137,11 +131,7 @@ export const messages = [
     message: [
       {
         id: 1,
-        messageContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi
-        temporibus vero doloribus natus pariatur reprehenderit tenetur
-        recusandae sit delectus dolores, dolorem doloremque, a exercitationem?
-        Cupiditate repellendus dolorem doloremque perferendis? Autem iure
-        quisquam quae. Assumenda corrupti sit ipsa excepturi numquam commodi
+        messageContent: `Assumenda corrupti sit ipsa excepturi numquam commodi
         maxime aliquid unde. Quod, vel placeat eos ullam minus ipsum nihil cum
         soluta? Sit officia impedit ut et optio.`,
         my: false,

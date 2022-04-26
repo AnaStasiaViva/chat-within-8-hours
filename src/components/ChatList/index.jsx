@@ -1,32 +1,25 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React from "react";
 import ChatItem from "../ChatItem";
 import Header from "../Header";
 import "./styles.scss";
-import { useSelector, useDispatch } from "react-redux";
-
-import { messages } from "../../temp-data/data";
+import { useDispatch, useSelector } from "react-redux";
 import { chatActions } from "../../redux/slices/chatSlice";
 
 const ChatList = () => {
+  const { activeChatId, chats } = useSelector((state) => state.chatReducer);
   const dispatch = useDispatch();
 
-  const [selectedChat, setSelectedChat] = useState(1);
-
-  const onSelectChat = useCallback(
-    (val) => {
-      setSelectedChat(val);
-      dispatch(chatActions.setActiveChatId(val));
-    },
-    [selectedChat]
-  );
+  const onSelectChat = (val) => {
+    dispatch(chatActions.setActiveChatId(val));
+  };
 
   return (
     <div className="ChatListContainer">
       <Header title="All chats" icon={false} />
       <div>
-        {messages?.map((msg) => (
+        {chats?.map((msg) => (
           <div onClick={() => onSelectChat(msg.id)}>
-            <ChatItem key={msg.id} data={msg} selectedChat={selectedChat} />
+            <ChatItem key={msg.id} data={msg} selectedChat={activeChatId} />
           </div>
         ))}
       </div>

@@ -3,7 +3,7 @@ import { messages } from "../../temp-data/data";
 
 const initialState = {
   chats: messages,
-  chat: messages[0],
+  chat: [messages[0]],
   activeChatId: 1,
 };
 

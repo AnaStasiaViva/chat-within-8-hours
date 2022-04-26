@@ -2,7 +2,7 @@ import "./App.css";
 import MainChatPage from "./pages";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Routes>
@@ -11,6 +11,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

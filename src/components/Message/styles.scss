@@ -1,18 +1,7 @@
 .Message {
   overflow-y: auto;
   height: 75vh;
-
   max-width: 100%;
-  // .message {
-  //   width: 50%;
-  //   background: rgba(229, 231, 231, 0.493);
-  //   padding: 10px;
-  //   border-radius: 3px;
-  //   margin-bottom: 15px;
-
-  //   position: relative;
-  //   //height: 10px;
-  // }
 
   .left {
     justify-content: flex-start;
@@ -53,3 +42,14 @@
     }
   }
 }
+
+// .message {
+//   width: 50%;
+//   background: rgba(229, 231, 231, 0.493);
+//   padding: 10px;
+//   border-radius: 3px;
+//   margin-bottom: 15px;
+
+//   position: relative;
+//   //height: 10px;
+// }

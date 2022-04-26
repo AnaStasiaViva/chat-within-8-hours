@@ -1,6 +1,8 @@
 import React from "react";
-import owl from "../../assets/owl.jpeg";
 import "./styles.scss";
+
+//temp data
+import owl from "../../assets/owl.jpeg";
 
 const Avatar = ({ contactName = "Great project" }) => {
   return (
