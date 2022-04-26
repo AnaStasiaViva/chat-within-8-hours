@@ -1,0 +1,30 @@
+.ChatItemContainer {
+  background: rgba(191, 224, 235, 0.377);
+  padding: 12px 0 12px 12px;
+  display: flex;
+  flex-direction: row;
+
+  .img-wrapper {
+    height: 45px;
+    //border-radius: 20px;
+    padding-right: 10px;
+
+    img {
+      //width: inherit;
+      height: inherit;
+      overflow: hidden;
+      border-radius: 7px;
+    }
+  }
+
+  .content {
+    div {
+      display: flex;
+      justify-content: space-between;
+      //background: pink;
+      height: 13px;
+      span {
+      }
+    }
+  }
+}

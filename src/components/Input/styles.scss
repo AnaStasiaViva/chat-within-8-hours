@@ -1,0 +1,29 @@
+.Input {
+  margin: 0 20px;
+  .input-wrapper {
+    width: 100%;
+
+    input {
+      width: inherit;
+      padding: 10px 0;
+      border: 1px solid rgba(182, 177, 177, 0.493);
+    }
+  }
+  .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      background: rgba(151, 219, 249, 0.288);
+    }
+
+    div:nth-child(2) {
+      background: none;
+    }
+  }
+}
