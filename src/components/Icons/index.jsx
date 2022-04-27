@@ -10,10 +10,6 @@ export const AttachmentIcon = () => {
     setImages(imageList);
   };
 
-  useEffect(() => {
-    console.log(images);
-  }, [images]);
-
   return (
     <ImageUploading
       multiple
