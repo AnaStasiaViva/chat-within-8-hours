@@ -8,12 +8,19 @@ import { chatActions } from "../../redux/slices/chatSlice";
 import "./styles.scss";
 
 const Chat = () => {
-  const { chat, activeChatId } = useSelector((state) => state.chatReducer);
+  const { chat, activeChatId, chats } = useSelector(
+    (state) => state.chatReducer
+  );
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(chatActions.setSelectedChat());
   }, [activeChatId]);
+
+  useEffect(() => {
+    console.log(chats);
+    console.log("triggered=");
+  }, [chats]);
 
   return (
     <div className="ChatContainer">

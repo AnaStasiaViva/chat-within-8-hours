@@ -15,7 +15,7 @@ const Message = ({ my = false, main = false, messages }) => {
       {message &&
         message.length !== 0 &&
         message?.map((msg) => {
-          const shouldRenderAva =
+          const shouldRenderAvatar =
             (msg.my === false && prev.current && msg.my !== prev.current?.my) ||
             (msg.my === false && msg.id === 1);
 
@@ -23,19 +23,36 @@ const Message = ({ my = false, main = false, messages }) => {
 
           return (
             <>
-              {shouldRenderAva && (
+              {shouldRenderAvatar && (
                 <div className="avatar">
                   <Avatar contactName={name} />
                 </div>
               )}
-              <div
-                className={msg.my ? "message own right" : "message sender left"}
-              >
-                <div>
-                  <p>{msg.messageContent}</p>
-                  <Time />
+
+              {msg.messageContent !== "" && (
+                <div
+                  className={
+                    msg.my ? "message own right" : "message sender left"
+                  }
+                >
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <p>{msg.messageContent}</p>
+                    {msg.image && msg.image?.length !== 0 && (
+                      <img src={msg?.image[0].data_url} alt=""></img>
+                    )}
+
+                    <Time
+                      style={{
+                        display: "flex",
+                        alignSelf: "end",
+                        justifyContent: "flex-end",
+                      }}
+                    />
+                  </div>
                 </div>
-              </div>
+              )}
             </>
           );
         })}
