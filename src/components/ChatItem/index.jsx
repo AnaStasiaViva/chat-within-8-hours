@@ -1,8 +1,7 @@
 import React from "react";
 import "./styles.scss";
-
-//temp data
-import owl from "../../assets/owl.jpeg";
+import Time from "../Time/index";
+import { formatDate } from "../../utils/helper";
 
 const ChatItem = ({ data, selectedChat }) => {
   return (
@@ -14,15 +13,18 @@ const ChatItem = ({ data, selectedChat }) => {
       }
     >
       <div className="img-wrapper">
-        <img src={owl} alt="" />
+        <img src={data.avatar} alt="" />
       </div>
       <div className="content">
         <div>
-          <span>{data.name}</span>
-          <span>{data.time}</span>
+          <span>
+            {data.last_message.user_name}
+            <span></span> {data.last_message.user_surname}
+          </span>
+          <Time time={formatDate(data.last_message)} />
         </div>
         <div>
-          <p className="content-text">{data.content}</p>
+          <p className="content-text">{data.last_message.message}</p>
         </div>
       </div>
     </div>

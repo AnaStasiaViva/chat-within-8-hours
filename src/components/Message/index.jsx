@@ -1,58 +1,77 @@
 import React, { useRef } from "react";
 import Avatar from "../Avatar";
+import { NewMessage } from "../SystemMessages";
 import Time from "../Time";
 import "./styles.scss";
+import { formatDate } from "../../utils/helper";
+import { MarkedIcon } from "../Icons";
 
-const Message = ({ my = false, main = false, messages }) => {
-  //my true false
-  //main avatar true false
-
+const Message = ({ messages }) => {
   const prev = useRef();
-  const { name, message } = messages[0];
 
   return (
     <div className="Message">
-      {message &&
-        message.length !== 0 &&
-        message?.map((msg) => {
+      {messages &&
+        messages.length !== 0 &&
+        messages?.map((msg) => {
           const shouldRenderAvatar =
-            (msg.my === false && prev.current && msg.my !== prev.current?.my) ||
-            (msg.my === false && msg.id === 1);
+            (msg.user.you === false &&
+              prev.current &&
+              msg.user.you !== prev.current?.user.you) ||
+            msg.user.you === false;
+
+          const shouldSendSystemMessage =
+            msg.is_new === true &&
+            prev.current &&
+            msg.is_new !== prev.current?.is_new;
 
           prev.current = msg;
 
-          console.log(msg?.image, "msg==");
-
           return (
             <>
+              {shouldSendSystemMessage && <NewMessage />}
               {shouldRenderAvatar && (
                 <div className="avatar">
-                  <Avatar contactName={name} />
+                  <Avatar
+                    img={msg.user.avatar}
+                    contactName={msg.user.name}
+                    lastname={msg.user.surname}
+                  />
                 </div>
               )}
 
-              {msg.messageContent !== "" && (
+              {msg.message !== "" && (
                 <div
                   className={
-                    msg.my ? "message own right" : "message sender left"
+                    msg.user.you ? "message own right  " : "message sender left"
                   }
                 >
                   <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={
+                      msg.user.you
+                        ? { background: "rgba(64, 126, 201, 0.16)" }
+                        : { background: "#f3f3f3" }
+                    }
                   >
-                    <p>{msg.messageContent}</p>
-
-                    {/* {msg.image && msg.image?.length !== 0 && (
-                      <img src={msg?.image[0].data_url} alt=""></img>
-                    )} */}
-
-                    <Time
+                    <p>{msg.message}</p>
+                    <p
                       style={{
                         display: "flex",
-                        alignSelf: "end",
-                        justifyContent: "flex-end",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        paddingLeft: "7px",
                       }}
-                    />
+                    >
+                      <Time
+                        time={formatDate(msg)}
+                        style={{
+                          display: "flex",
+                          alignSelf: "end",
+                          justifyContent: "flex-end",
+                        }}
+                      />
+                      <MarkedIcon />
+                    </p>
                   </div>
                 </div>
               )}
@@ -60,15 +79,14 @@ const Message = ({ my = false, main = false, messages }) => {
               {msg.image && msg.image.length !== 0 && (
                 <div
                   className={
-                    msg.my ? "message own right" : "message sender left"
+                    msg.user.you ? "message own right" : "message sender left"
                   }
                 >
-                  <div
-                  // style={{ display: "flex", justifyContent: "space-between" }}
-                  >
+                  <div>
                     <img src={msg?.image[0].data_url} alt=""></img>
 
                     <Time
+                      time={formatDate(msg)}
                       style={{
                         display: "flex",
                         alignSelf: "end",

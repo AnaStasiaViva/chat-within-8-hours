@@ -1,18 +1,18 @@
 import React from "react";
 import "./styles.scss";
 
-//temp data
-import owl from "../../assets/owl.jpeg";
-
-const Avatar = ({ contactName = "Great project" }) => {
+const Avatar = ({ contactName = "Great project", img, lastname = "" }) => {
   return (
     <div className="AvatarContainer">
       <div className="img-wrapper">
-        <img src={owl} alt="" />
+        <img src={img} alt="" />
       </div>
       <div className="content">
         <div>
-          <span>{contactName}</span>
+          <span>
+            {contactName}
+            <span> {lastname}</span>
+          </span>
         </div>
       </div>
     </div>

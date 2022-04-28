@@ -1,11 +1,16 @@
 import React from "react";
 import "./styles.scss";
-import { ChatIcon } from "../Icons";
+import ChatI from "../../assets/Shape.png";
 
 const Header = ({ title = "", icon }) => {
   return (
     <div className="HeaderContainer">
-      {icon === true && <ChatIcon />}
+      {icon === true && (
+        <div className="icon">
+          <img src={ChatI} alt=""></img>
+        </div>
+      )}
+
       <span>{title}</span>
     </div>
   );

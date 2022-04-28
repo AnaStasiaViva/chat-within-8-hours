@@ -2,6 +2,7 @@
   overflow-y: auto;
   height: 75vh;
   max-width: 100%;
+  padding-top: 10px;
 
   .left {
     justify-content: flex-start;
@@ -13,10 +14,14 @@
 
   .sender {
     margin-left: 70px;
+    // background: #f3f3f3;
   }
 
   .own {
     margin-right: 50px;
+  }
+  .self-color {
+    background: rgba(64, 126, 201, 0.16);
   }
 
   .message {
@@ -27,7 +32,6 @@
 
     div {
       max-width: inherit;
-      // display: "flex", justifyContent: "space-between"
       display: flex;
       justify-content: space-between;
 
@@ -42,7 +46,7 @@
 
     div {
       width: 45%;
-      background: rgba(229, 231, 231, 0.493);
+      background: #f3f3f3;
       padding: 10px 10px 10px 30px;
       display: flex;
 
@@ -53,14 +57,3 @@
     }
   }
 }
-
-// .message {
-//   width: 50%;
-//   background: rgba(229, 231, 231, 0.493);
-//   padding: 10px;
-//   border-radius: 3px;
-//   margin-bottom: 15px;
-
-//   position: relative;
-//   //height: 10px;
-// }

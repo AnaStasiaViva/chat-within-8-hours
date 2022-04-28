@@ -1,18 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { SendIcon } from "../Icons";
 import ImageUpload from "../ImageUpload";
 import "./styles.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { chatActions } from "../../redux/slices/chatSlice";
 import _ from "lodash";
 
-//addMessage
-
 const Input = () => {
-  const { activeChatId, chats, chat } = useSelector(
-    (state) => state.chatReducer
-  );
-
   const dispatch = useDispatch();
 
   const [textMessage, setTextMessage] = useState({
@@ -47,7 +41,6 @@ const Input = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (textMessage?.text === "" || textMessage?.images.length === 0) return;
     dispatch(chatActions.addMessage(textMessage));
     setTextMessage(() => ({
       text: "",

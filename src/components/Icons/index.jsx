@@ -1,6 +1,27 @@
 import React from "react";
 import "./styles.scss";
 
+export const MarkedIcon = () => {
+  return (
+    <span className="Icon extra">
+      <svg
+        width="16"
+        height="10"
+        viewBox="0 0 16 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M3.71942 8.46433L1.01932 5.20977C0.805292 4.95178 0.436584 4.92854 0.195794 5.15787C-0.044996 5.38719 -0.0666847 5.78223 0.147351 6.04022L3.25846 9.79025C3.48144 10.059 3.8696 10.0712 4.10692 9.81692L5.55182 8.26883L6.81402 9.79025C7.037 10.059 7.42515 10.0712 7.66248 9.81692L15.8292 1.06694C16.057 0.822864 16.057 0.427136 15.8292 0.183058C15.6013 -0.0610194 15.232 -0.0610194 15.0042 0.183058L7.27498 8.46433L6.3782 7.38342L12.2736 1.06694C12.5014 0.822864 12.5014 0.427136 12.2736 0.183058C12.0458 -0.0610194 11.6764 -0.0610194 11.4486 0.183058L5.60178 6.44755L4.7754 7.33296L3.71942 8.46433Z"
+          fill="#407EC9"
+        />
+      </svg>
+    </span>
+  );
+};
+
 export const UploadIcon = ({ isDragging, onImageUpload, dragProps }) => {
   return (
     <div
@@ -90,8 +111,8 @@ export const UpdateIcon = () => {
   return (
     <div className="Icons">
       <svg
-        width="64"
-        height="64"
+        width="60"
+        height="60"
         viewBox="0 0 64 64"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -182,85 +203,3 @@ export const ChatIcon = () => {
     </div>
   );
 };
-
-// export const AttachmentIcon = () => {
-//   const [images, setImages] = useState([]);
-//   const maxNumber = 3;
-
-//   const onChange = (imageList, addUpdateIndex) => {
-//     setImages(imageList);
-//   };
-
-//   return (
-//     <ImageUploading
-//       multiple
-//       value={images}
-//       onChange={onChange}
-//       maxNumber={maxNumber}
-//       dataURLKey="data_url"
-//     >
-//       {({
-//         imageList,
-//         onImageUpload,
-//         onImageRemoveAll,
-//         onImageUpdate,
-//         onImageRemove,
-//         isDragging,
-//         dragProps,
-//       }) => (
-//         //  UI
-//         <div className="upload__image-wrapper">
-//           <UploadIcon
-//             isDragging={isDragging}
-//             onImageUpload={onImageUpload}
-//             dragProps={dragProps}
-//           />
-
-//           {images.length !== 0 && (
-//             <RemoveAllIcon onImageRemoveAll={onImageRemoveAll} />
-//           )}
-//           {imageList.map((image, index) => (
-//             <div key={index} className="image-item">
-//               <img src={image["data_url"]} alt="" width="100" />
-//               <div className="image-item__btn-wrapper">
-//                 <a href="#" onClick={() => onImageUpdate(index)}>
-//                   <UpdateIcon />
-//                 </a>
-//                 <a href="#" onClick={() => onImageRemove(index)}>
-//                   <RemoveIcon />
-//                 </a>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       )}
-//     </ImageUploading>
-//   );
-// };
-
-// <div className="Icon" onChange={onUploadImg}>
-//   <svg
-//     width="20px"
-//     height="15px"
-//     viewBox="0 0 20 20"
-//     xmlns="http://www.w3.org/2000/svg"
-//   >
-//     <path d="M5.602 19.8c-1.293 0-2.504-.555-3.378-1.44-1.695-1.716-2.167-4.711.209-7.116l9.748-9.87c.988-1 2.245-1.387 3.448-1.06 1.183.32 2.151 1.301 2.468 2.498.322 1.22-.059 2.493-1.046 3.493l-9.323 9.44c-.532.539-1.134.858-1.738.922-.599.064-1.17-.13-1.57-.535-.724-.736-.828-2.117.378-3.337l6.548-6.63c.269-.272.705-.272.974 0s.269.714 0 .986l-6.549 6.631c-.566.572-.618 1.119-.377 1.364.106.106.266.155.451.134.283-.029.606-.216.909-.521l9.323-9.439c.64-.648.885-1.41.69-2.145a2.162 2.162 0 0 0-1.493-1.513c-.726-.197-1.48.052-2.12.7l-9.748 9.87c-1.816 1.839-1.381 3.956-.209 5.143 1.173 1.187 3.262 1.629 5.079-.212l9.748-9.87a.683.683 0 0 1 .974 0 .704.704 0 0 1 0 .987L9.25 18.15c-1.149 1.162-2.436 1.65-3.648 1.65z" />
-//   </svg>
-// </div>
-
-// {/* <div
-//             className="Icon"
-//             style={isDragging ? { color: "red" } : undefined}
-//             onClick={onImageUpload}
-//             {...dragProps}
-//           >
-//             <svg
-//               width="20px"
-//               height="15px"
-//               viewBox="0 0 20 20"
-//               xmlns="http://www.w3.org/2000/svg"
-//             >
-//               <path d="M5.602 19.8c-1.293 0-2.504-.555-3.378-1.44-1.695-1.716-2.167-4.711.209-7.116l9.748-9.87c.988-1 2.245-1.387 3.448-1.06 1.183.32 2.151 1.301 2.468 2.498.322 1.22-.059 2.493-1.046 3.493l-9.323 9.44c-.532.539-1.134.858-1.738.922-.599.064-1.17-.13-1.57-.535-.724-.736-.828-2.117.378-3.337l6.548-6.63c.269-.272.705-.272.974 0s.269.714 0 .986l-6.549 6.631c-.566.572-.618 1.119-.377 1.364.106.106.266.155.451.134.283-.029.606-.216.909-.521l9.323-9.439c.64-.648.885-1.41.69-2.145a2.162 2.162 0 0 0-1.493-1.513c-.726-.197-1.48.052-2.12.7l-9.748 9.87c-1.816 1.839-1.381 3.956-.209 5.143 1.173 1.187 3.262 1.629 5.079-.212l9.748-9.87a.683.683 0 0 1 .974 0 .704.704 0 0 1 0 .987L9.25 18.15c-1.149 1.162-2.436 1.65-3.648 1.65z" />
-//             </svg>
-//           </div> */}

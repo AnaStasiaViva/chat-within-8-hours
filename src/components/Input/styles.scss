@@ -1,13 +1,17 @@
 .Input {
-  margin: 0 20px;
-
-  width: 800px;
+  margin: 5px 10px;
+  max-width: 70%;
+  width: 70%;
   position: fixed;
   padding: 10px 10px 0px 10px;
   bottom: 0;
 
+  button {
+    border: none;
+  }
+
   .input-wrapper {
-    width: inherit;
+    width: 100%;
 
     input {
       width: 100%;
