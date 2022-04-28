@@ -5,9 +5,17 @@
   margin-bottom: 15px;
 
   .message {
-    color: rgba(94, 183, 243, 0.747);
-    background: rgba(208, 224, 247, 0.185);
+    color: #407ec9;
+    background: rgba(64, 126, 201, 0.08);
     padding: 10px 100px 5px 100px;
+    max-width: 700px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+
+    span {
+      text-align: center;
+    }
   }
 
   .time {

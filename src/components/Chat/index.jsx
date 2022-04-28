@@ -29,7 +29,7 @@ const Chat = () => {
   }, [chatsAll, chatId, dispatch]);
 
   useEffect(() => {
-    fetchMessages();
+    if (chatsAll && chatsAll.length !== 0 && chatId !== null) fetchMessages();
   }, [chatId]);
 
   return (

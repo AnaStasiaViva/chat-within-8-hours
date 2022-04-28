@@ -14,7 +14,7 @@ export const NewMessage = () => {
 export const WarningMessage = () => {
   return (
     <div className="NewMessage ">
-      <div className=" extra">
+      <div className="extra">
         <span>
           ПРОСТИТЕ! НО ДЛЯ МОБИЛЬНЫХ ТЕЛЕФОНОВ Y НАС ЕСТЬ МОБИЛЬНОЕ ПРИЛОЖЕНИЕ
         </span>

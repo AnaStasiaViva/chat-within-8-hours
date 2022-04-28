@@ -24,9 +24,8 @@ const MainChatPage = () => {
     return (_) => {
       window.removeEventListener("resize", debouncedHandleResize);
     };
-  });
+  }, []);
 
-  console.log(dimensions, "dimensions");
   return (
     <div className="MainChatPage">
       {dimensions.width <= 700 ? (

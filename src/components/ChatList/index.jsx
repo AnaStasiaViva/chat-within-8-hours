@@ -21,8 +21,8 @@ const ChatList = () => {
   }, [chatsAll]);
 
   useEffect(() => {
-    fetchChats();
-  }, []);
+    if (chatsAll && chatsAll.length === 0) fetchChats();
+  }, [chatsAll]);
 
   return (
     <div className="ChatListContainer">

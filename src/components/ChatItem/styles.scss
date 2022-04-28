@@ -5,7 +5,8 @@
   cursor: pointer;
 
   .img-wrapper {
-    height: 45px;
+    width: 48px;
+    height: 48px;
     padding-right: 10px;
 
     img {
@@ -36,9 +37,9 @@
 }
 
 .selected {
-  background: rgba(191, 224, 235, 0.377);
+  background: rgba(64, 126, 201, 0.08);
 }
 
 .default {
-  background: rgba(244, 246, 247, 0.377);
+  background: #ffffff;
 }
