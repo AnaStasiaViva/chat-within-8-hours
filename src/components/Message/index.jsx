@@ -21,6 +21,8 @@ const Message = ({ my = false, main = false, messages }) => {
 
           prev.current = msg;
 
+          console.log(msg?.image, "msg==");
+
           return (
             <>
               {shouldRenderAvatar && (
@@ -39,9 +41,32 @@ const Message = ({ my = false, main = false, messages }) => {
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <p>{msg.messageContent}</p>
-                    {msg.image && msg.image?.length !== 0 && (
+
+                    {/* {msg.image && msg.image?.length !== 0 && (
                       <img src={msg?.image[0].data_url} alt=""></img>
-                    )}
+                    )} */}
+
+                    <Time
+                      style={{
+                        display: "flex",
+                        alignSelf: "end",
+                        justifyContent: "flex-end",
+                      }}
+                    />
+                  </div>
+                </div>
+              )}
+
+              {msg.image && msg.image.length !== 0 && (
+                <div
+                  className={
+                    msg.my ? "message own right" : "message sender left"
+                  }
+                >
+                  <div
+                  // style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <img src={msg?.image[0].data_url} alt=""></img>
 
                     <Time
                       style={{

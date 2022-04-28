@@ -25,6 +25,17 @@
     margin-bottom: 15px;
     display: flex;
 
+    div {
+      max-width: inherit;
+      // display: "flex", justifyContent: "space-between"
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        width: inherit;
+      }
+    }
+
     span {
       font-size: 12px;
     }

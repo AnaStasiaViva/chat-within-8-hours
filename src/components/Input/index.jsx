@@ -36,7 +36,7 @@ const Input = () => {
   const onChangeText = (e) => {
     setTextMessage((prev) => ({
       ...prev,
-      text: e.target.value,
+      text: e.target.value.trim(),
     }));
 
     delayedQuery((prev) => ({
